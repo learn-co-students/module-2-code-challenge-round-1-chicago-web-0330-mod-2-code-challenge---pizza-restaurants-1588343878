@@ -1,0 +1,14 @@
+<%# the Restaurant's name and address
+a list of the Pizzas it sells %>
+<h1> <%= @resturant.name%></h1><br>
+<h1> <%= @resturant.address%></h1><br>
+
+<h1>Pizza </h1><br>
+<p>
+<%= @resturant.pizzas.each do |pizza| %>
+ <%= pizza.name >
+</p>
+<% end %>
+
+
+
