@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 #   1
-Restaurant.destroy_all
+#Restaurant.destroy_all
  
 restaurants = [{
   name: "Sottocasa NYC",
@@ -72,3 +72,12 @@ pizzas = [
 pizzas.each do |p|
   Pizza.create!(p)
 end
+
+new1 = RestaurantPizza.create(pizza_id:1, restaurant_id:10)
+new2 = RestaurantPizza.create(pizza_id:5, restaurant_id:10)
+
+new3 = RestaurantPizza.create(pizza_id:3, restaurant_id:11)
+new4 = RestaurantPizza.create(pizza_id:6, restaurant_id:11)
+
+new5 = RestaurantPizza.create(pizza_id:4, restaurant_id:12)
+new6 = RestaurantPizza.create(pizza_id:8, restaurant_id:12)
