@@ -1,0 +1,19 @@
+<% if @pizza.errors.any? %>
+<%= pluralize(@pizza.errors.count, "error") %>
+<ul>
+<% @pizza.errors.full_messages.each do |msg| %>
+  <li> <%= msg %> </li>
+  <% end %>
+  </ul> 
+
+<%= form_for @pizza do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :ingredients %>
+  <%= f.text_field :ingredients %>
+  <br>
+  <%= collection_select :restaurant, :resaurant_id, Restaurant.all, :id, :name %>
+  <%= f.submit %>
+  <% end %>
+ 
