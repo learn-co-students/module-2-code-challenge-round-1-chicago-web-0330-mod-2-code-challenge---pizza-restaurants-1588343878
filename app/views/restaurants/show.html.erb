@@ -1,0 +1,20 @@
+Name: 
+<%= @restaurant.name %><br>
+Address: 
+<%= @restaurant.address %><br>
+
+<%= @restaurant.pizzas.each do |pizza| %>
+    <li>
+    <%= link_to pizza, pizza_path(pizza) %>
+    </li>
+<% end %>
+</ul>
+
+<!-- ### 3. Restaurant Show Page
+
+There should be a show page for each Restaurant. It should include:
+
+- the Restaurant's name and address
+- a list of the Pizzas it sells
+
+Each pizza in the list should link to that Pizza's show page. -->

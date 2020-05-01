@@ -1,0 +1,15 @@
+<!-- There should be a show page for each Pizza. It should display the name and ingredients. -->
+Name: 
+<%= @pizza.name %><br>
+Ingredients: 
+<%= @pizza.ingredients %><br>
+Restaurants: <ul><br>
+<% @pizza.restaurants.each do |restaurant| %>
+    <li><%= restaurant %></li>
+    <% end %>
+</ul>
+
+
+
+
+
