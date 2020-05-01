@@ -1,0 +1,26 @@
+<h1 style='margin-top:100px;font-size:2rem'>Create a new pizza</h1>
+
+<% if flash[:errors] && flash[:errors].any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(flash[:errors].count, "error") %> stopped this pizza from being saved:</h2>
+ 
+    <ul>
+    <% flash[:errors].each do |msg| %>
+      <li style='color:red;'><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @pizza do |f| %>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :ingredients, "Ingredients:" %>
+  <%= f.text_field :ingredients %>
+  <br>
+  <%= f.label :restaurant_ids, "Restaurant:" %>
+  <%= f.collection_select(:restaurant_ids, @restaurants, :id, :name) %>
+  <br>
+  <%= f.submit %>
+<% end %>

@@ -8,6 +8,8 @@
 #
 #   1
 Restaurant.destroy_all
+Pizza.destroy_all
+RestaurantPizza.destroy_all
  
 restaurants = [{
   name: "Sottocasa NYC",
@@ -72,3 +74,41 @@ pizzas = [
 pizzas.each do |p|
   Pizza.create!(p)
 end
+
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+RestaurantPizza.create(pizza_id: Pizza.all.sample.id, restaurant_id: Restaurant.all.sample.id)
+
