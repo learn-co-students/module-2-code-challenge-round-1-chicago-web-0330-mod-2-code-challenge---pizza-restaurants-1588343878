@@ -1,0 +1,20 @@
+<h1>Update Restaurant</h1>
+
+<%= form_for @restaurant do |f| %>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :address, "Address:" %>
+  <%= f.text_field :address %>
+  <br>
+  <%= f.label :pizza_ids, "Pizzas:" %>
+  <%= f.collection_check_boxes(:pizza_ids, @pizzas, :id, :name) %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+The update action should create associations for each of the Pizzas the user selected.
+
+When the form saves, the user should be redirected to the Restaurant show page.
+
+The Restaurant show page should show a link to this edit page.

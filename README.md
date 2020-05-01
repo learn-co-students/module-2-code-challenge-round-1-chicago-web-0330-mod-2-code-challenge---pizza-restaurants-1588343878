@@ -98,7 +98,7 @@ Add error handling to the Pizza create action. Show any validation errors on the
 
 ### 7. Advanced: Pizza Validation
 
-Pizzas should not have the same name.
+Pizzas should not have the same name .
 
 Add a validation to prevent this.
 
