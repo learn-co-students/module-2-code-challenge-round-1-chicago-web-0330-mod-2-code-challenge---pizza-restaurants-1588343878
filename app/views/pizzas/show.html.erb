@@ -1,0 +1,12 @@
+
+
+<h1>Pizza detail</h1><br>
+<p>
+<%= @pizzas.each do |pizza| %>
+Detail: <%= @pizza.ingredients.map(&:name).join(' ') %>
+<%= link_to pizza.name,pizza_path(pizza)%>
+</p>
+<% end %>
+
+
+
