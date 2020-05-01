@@ -1,0 +1,23 @@
+<h1>Create a Pizza<h1>
+
+<% if @pizza.errors.any? %>
+  <p style="color: red">Invalid! Please fix the following <%= pluralize(@pizza.errors.count, "error") %>:</p>
+  <%= @pizza.errors.full_messages.each do |message| %>
+  <ul>
+    <p style="color: red"><%= message %></p>
+  </ul>
+  <% end %>
+<% end %>
+<br>
+<%= form_for @pizza do |f| %>
+  <%= f.label :name, "Pizza name:" %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :ingredients, "Ingredients:" %>
+  <%= f.text_field :ingredients %><br><br>
+
+  <%= f.label :restaurants, "Restaurant:" %>
+  <%= f.collection_select :restaurants, Restaurant.all, :id, :name %><br><br>
+
+  <%= f.submit %>
+<% end %>
