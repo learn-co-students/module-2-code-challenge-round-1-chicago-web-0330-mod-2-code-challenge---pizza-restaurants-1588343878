@@ -1,0 +1,9 @@
+<h1>Show Page for <%= @rest.name %> </h1>
+
+<p>Address: <%= @rest.address %></p>
+
+<p>Pizzas:</p>
+<% @rest.pizzas.each do |p| %>
+  <li><%= link_to Pizza.find(p.id).name, p %></li>
+<% end %>
+
