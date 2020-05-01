@@ -1,0 +1,12 @@
+<h1> Restaurant Info </h1>
+Name:<br>
+<%= @restaurant.name %><br><br>
+Address:<br>
+<%= @restaurant.address%><br>
+
+Pizzas:
+
+<%@restaurant.restaurant_pizzas.each do |join|%>
+  <%=join.pizza_id%>
+
+<%end%>
