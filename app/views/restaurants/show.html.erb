@@ -1,0 +1,8 @@
+<h1>Name: <%= @restaurant.name %> </h1>
+<p>Address: <%= @restaurant.address %> </p>
+<h2>Pizzas:</h2>
+<% @restaurant.pizzas.each do |pie| %>
+  <ul>
+    <li> <%= link_to pie.name, pizza_path(pie) %> </li>
+    <% end %> 
+    </ul>
