@@ -1,0 +1,22 @@
+<h1>Pizza Form</h1>
+<br>
+
+  
+<% if @pizza.errors.any? %>
+    <p style="color: red">Invalid!</p>
+    <% @pizza.errors.full_messages.each do |message| %>
+        <p style="color: red"><%= message %></p>
+    <% end %>
+<% end %>
+
+<%= form_for(@pizza) do |f| %>
+    <%= f.label :name, "Pizza name:" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :ingredients, "Pizza ingredients:" %>
+    <%= f.text_field :ingredients %>
+    <br>
+    <%= f.collection_select :restaurant_ids, Restaurant.all, :id, :name %>
+    <br>
+    <%= f.submit %>
+<% end %>
