@@ -1,0 +1,22 @@
+<h1> Create a New Pizza! </h1>
+
+<% if @pizza.errors.any? %>
+  <p style="color: red "> <%= pluralize(@pizza.errors.count, "error") %> prohibited from this pizza being saved: </p>
+      <% @pizza.errors.full_messages.each do |msg| %>
+      <p style="color: red"> <%= msg %> </p>
+      <% end %>
+<% end %>
+<br>
+
+<%= form_for @pizza do |f| %>
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :ingredients, "Ingredients: " %>
+  <%= f.text_field :ingredients %>
+  <br>
+  <%= f.label :restaurant_ids, "Restaurant: " %>
+  <%= f.collection_select :restaurant_ids, Restaurant.all, :id, :name %>
+  <br>
+  <%= f.submit %>
+<% end %>
