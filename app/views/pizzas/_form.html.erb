@@ -1,0 +1,18 @@
+<%= form_for pizza do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %>
+    <%= f.label :restaurants, 'Restaurant' %>
+    <%= f.collection_select(:id, Restaurant.all, :id, :name) %>
+
+    <%= f.submit %>
+<% end %>
+
+
+<!-- Cant seem to get the association working between restaurants and pizzas. I've done it before 
+in the labs and in my project, so I'm not sure what I'm doing wrong but I know that I'd be able to do it given time.
+stress-induced brainfreeze. -->
+
+
+
