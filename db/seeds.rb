@@ -72,3 +72,8 @@ pizzas = [
 pizzas.each do |p|
   Pizza.create!(p)
 end
+
+RestaurantPizza.create(restaurant_id: 2, pizza_id: 1)
+RestaurantPizza.create(restaurant_id: 2, pizza_id: 2)
+RestaurantPizza.create(restaurant_id: 1, pizza_id: 3)
+RestaurantPizza.create(restaurant_id: 3, pizza_id: 4)
